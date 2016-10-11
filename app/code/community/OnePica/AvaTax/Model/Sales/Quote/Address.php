@@ -69,6 +69,21 @@ class OnePica_AvaTax_Model_Sales_Quote_Address extends Mage_Sales_Model_Quote_Ad
         return $result;
     }
 
+    /**
+     * Get totals collector model
+     *
+     * @return Mage_Sales_Model_Quote_Address_Total_Collector
+     */
+    public function getTotalCollector()
+    {
+        $storeId = $this->getQuote()->getStoreId();
+        if (Mage::getStoreConfig('tax/avatax/action', $storeId) != OnePica_AvaTax_Model_Service_Abstract_Config::ACTION_DISABLE) {
+            Mage::getConfig()->setNode('global/sales/quote/totals/tax/class', 'avatax/sales_quote_address_total_tax');
+        }
+
+        return parent::getTotalCollector();
+    }
+
     /* BELOW ARE MAGE CORE PROPERTIES AND METHODS ADDED FOR OLDER VERSION COMPATABILITY */
 
     /**

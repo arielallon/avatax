@@ -168,19 +168,19 @@ _See: OnePica_AvaTax_Model_Avatax_Invoice_
 
 ## Common Problems
 
-**Q:** I can see tax rates during checkout, but nothing shows up in my AvaTax dashboard.  
-*A:* Most likely this is because the Magento cron is not running. For details on how to set up the cron, please see [magentocommerce.com](http://www.magentocommerce.com/wiki/how_to_setup_a_cron_job).
+**Q: I can see tax rates during checkout, but nothing shows up in my AvaTax dashboard.**  
+**A:** Most likely this is because the Magento cron is not running. For details on how to set up the cron, please see [magentocommerce.com](http://www.magentocommerce.com/wiki/how_to_setup_a_cron_job).
 
-*Q:* When am getting a "Doc status invalid" error message when creating a new invoice or credit memo.  
-*A:* Usually this is a problem when a system is attempting to commit to AvaTax a document with an ID that conflicts with one that's already there. Most of this time, this occurs when more than one installation of Magento with the AvaTax extension is communicating with a single "company" in the AvaTax account. This almost always happens in the build up to launch of a site as multiple systems are connecting to the same AvaTax "company" for testing.
+**Q: When am getting a "Doc status invalid" error message when creating a new invoice or credit memo.**  
+**A:** Usually this is a problem when a system is attempting to commit to AvaTax a document with an ID that conflicts with one that's already there. Most of this time, this occurs when more than one installation of Magento with the AvaTax extension is communicating with a single "company" in the AvaTax account. This almost always happens in the build up to launch of a site as multiple systems are connecting to the same AvaTax "company" for testing.
 
-*Q:* I think I have an old version of the One Pica AvaTax Magento Extension. What is the current version and how can I upgrade mine?  
-*A:* The current version can be found on [Magento Connect](http://www.magentocommerce.com/extension/specs/1839/one-pica-avatax#specs). You can upgrade the extension via Magento Connect within your installation. If you have a legacy versions of Magento Professional or Magento Enterprise without Magento Connect, you can download the latest version of the extension from our website at [onepica.com/magento-extensions/avatax](http://www.onepica.com/magento-extensions/avatax/).
+**Q: I think I have an old version of the One Pica AvaTax Magento Extension. What is the current version and how can I upgrade mine?**  
+**A:** The current version can be found on [Magento Connect](http://www.magentocommerce.com/extension/specs/1839/one-pica-avatax#specs). You can upgrade the extension via Magento Connect within your installation. If you have a legacy versions of Magento Professional or Magento Enterprise without Magento Connect, you can download the latest version of the extension from our website at [onepica.com/magento-extensions/avatax](http://www.onepica.com/magento-extensions/avatax/).
 
-*Q:* I am getting tax rates in the cart and orders are showing up in the AvaTax Dashboard, but they are always in an uncommitted state.  
-*A:* There is an option in the admin config section that would (correctly) make this happen. Check to see if admin condiguration option _Action_ (detailed [here](#connection-settings)) is set to "Enable: calculate tax, sumit data" instead of "Endable: calculate tax, submit data, and commit"
+**Q: I am getting tax rates in the cart and orders are showing up in the AvaTax Dashboard, but they are always in an uncommitted state.**  
+**A:** There is an option in the admin config section that would (correctly) make this happen. Check to see if admin condiguration option _Action_ (detailed [here](#connection-settings)) is set to "Enable: calculate tax, sumit data" instead of "Endable: calculate tax, submit data, and commit"
 
-*Q:* When AvaTax extension is enabled, Manage tax zones and Rates options from Sales > Taxes, some Calculation Settings and Tax Classes from System > Configuration > Sales > Tax disappear from Magento admin.  
-*A:* AvaTax extension hides these options "by design" as far as all tax calculation goes through AvaTax service rather than Magento. AvaTax extension overrides some default Magento functionality and requires certain values to be set in tax settings. Thus these options should be hidden to avoid confusing customer, when he tries to change settings but there is no effect on tax calculation results. If AvaTax extension is disabled for at least one store/website, then these options are available for this particular store/website.
+**Q: When AvaTax extension is enabled, Manage tax zones and Rates options from Sales > Taxes, some Calculation Settings and Tax Classes from System > Configuration > Sales > Tax disappear from Magento admin.**  
+**A:** AvaTax extension hides these options "by design" as far as all tax calculation goes through AvaTax service rather than Magento. AvaTax extension overrides some default Magento functionality and requires certain values to be set in tax settings. Thus these options should be hidden to avoid confusing customer, when he tries to change settings but there is no effect on tax calculation results. If AvaTax extension is disabled for at least one store/website, then these options are available for this particular store/website.
 
 _
